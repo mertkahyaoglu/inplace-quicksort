@@ -8,9 +8,9 @@ def inplaceqs(s, a, b):
     left = a
     right = b - 1
     while left <= right:
-        while left <= right and s[left] <= pivot:  # find an element larger than the pivot
+        while s[left] <= pivot:  # find an element larger than the pivot
             left += 1   
-        while right >= left and s[right] >= pivot: # find an element larger than the pivot
+        while s[right] >= pivot: # find an element larger than the pivot
             right -= 1  
         if left < right: 
             swapElements(s, left, right)
